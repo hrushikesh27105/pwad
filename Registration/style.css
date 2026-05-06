@@ -1,0 +1,53 @@
+body{
+    background: linear-gradient(135deg,#74ebd5,#9face6);
+    font-family: 'Segoe UI';
+    height:100vh;
+}
+
+/* FORM BOX */
+.form-box{
+    width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background:white;
+    border-radius: 15px;
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    color:#4f46e5;
+    font-weight:bold;
+}
+
+.subtitle{
+    text-align:center;
+    color:gray;
+}
+
+/* INPUT FOCUS */
+input:focus{
+    box-shadow:none !important;
+    border:2px solid #4f46e5 !important;
+}
+
+/* GENDER */
+.gender-box{
+    display:flex;
+    gap:15px;
+}
+
+/* BUTTON */
+.btn-glow{
+    background:linear-gradient(45deg,#4f46e5,#06b6d4);
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.btn-glow:hover{
+    transform:scale(1.03);
+    box-shadow:0px 5px 20px rgba(0,0,0,0.2);
+}

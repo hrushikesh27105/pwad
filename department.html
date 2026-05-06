@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Department Grid</title>
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet"
+        href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .department-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .department-name {
+            background-color: #3f6fd8;
+            color: white;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .custom-btn {
+            background-color: #f28c28 !important;
+            border: none !important;
+            color: white !important;
+            border-radius: 10px !important;
+            font-weight: bold !important;
+        }
+
+        .info-text {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 40px;
+            color: #444;
+        }
+
+        .back-btn {
+            margin-top: 20px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Home Page -->
+    <div data-role="page" id="home">
+
+        <div data-role="header" data-theme="b">
+            <h1>Department Grid View</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+
+            <div class="title">
+                Engineering Departments
+            </div>
+
+            <div class="grid-container">
+
+                <!-- IT -->
+                <div class="department-card">
+                    <div class="department-name">IT</div>
+
+                    <a href="#it"
+                        class="ui-btn custom-btn">
+                        View
+                    </a>
+                </div>
+
+                <!-- COMP -->
+                <div class="department-card">
+                    <div class="department-name">COMP</div>
+
+                    <a href="#comp"
+                        class="ui-btn custom-btn">
+                        View
+                    </a>
+                </div>
+
+                <!-- ETC -->
+                <div class="department-card">
+                    <div class="department-name">ETC</div>
+
+                    <a href="#etc"
+                        class="ui-btn custom-btn">
+                        View
+                    </a>
+                </div>
+
+                <!-- MECH -->
+                <div class="department-card">
+                    <div class="department-name">MECH</div>
+
+                    <a href="#mech"
+                        class="ui-btn custom-btn">
+                        View
+                    </a>
+                </div>
+
+                <!-- ELECT -->
+                <div class="department-card">
+                    <div class="department-name">ELECT</div>
+
+                    <a href="#elect"
+                        class="ui-btn custom-btn">
+                        View
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- IT Page -->
+    <div data-role="page" id="it">
+
+        <div data-role="header" data-theme="b">
+            <h1>IT Department</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+
+            <p class="info-text">
+                Information Technology Department
+            </p>
+
+            <a href="#home"
+                class="ui-btn ui-btn-inline ui-btn-b back-btn">
+                Back
+            </a>
+
+        </div>
+    </div>
+
+    <!-- COMP Page -->
+    <div data-role="page" id="comp">
+
+        <div data-role="header" data-theme="b">
+            <h1>COMP Department</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+
+            <p class="info-text">
+                Computer Engineering Department
+            </p>
+
+            <a href="#home"
+                class="ui-btn ui-btn-inline ui-btn-b back-btn">
+                Back
+            </a>
+
+        </div>
+    </div>
+
+    <!-- ETC Page -->
+    <div data-role="page" id="etc">
+
+        <div data-role="header" data-theme="b">
+            <h1>ETC Department</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+
+            <p class="info-text">
+                Electronics and Telecommunication Department
+            </p>
+
+            <a href="#home"
+                class="ui-btn ui-btn-inline ui-btn-b back-btn">
+                Back
+            </a>
+
+        </div>
+    </div>
+
+    <!-- MECH Page -->
+    <div data-role="page" id="mech">
+
+        <div data-role="header" data-theme="b">
+            <h1>MECH Department</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+
+            <p class="info-text">
+                Mechanical Engineering Department
+            </p>
+
+            <a href="#home"
+                class="ui-btn ui-btn-inline ui-btn-b back-btn">
+                Back
+            </a>
+
+        </div>
+    </div>
+
+    <!-- ELECT Page -->
+    <div data-role="page" id="elect">
+
+        <div data-role="header" data-theme="b">
+            <h1>ELECT Department</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+
+            <p class="info-text">
+                Electrical Engineering Department
+            </p>
+
+            <a href="#home"
+                class="ui-btn ui-btn-inline ui-btn-b back-btn">
+                Back
+            </a>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

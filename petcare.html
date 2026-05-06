@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PawsCare - Pet Care Services</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body {
+    background: #f9fbff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #4CAF50, #81C784);
+}
+
+/* Header */
+.hero {
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-weight: bold;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.icon {
+    font-size: 45px;
+    color: #4CAF50;
+}
+
+/* Contact Section */
+#contact {
+    display: none;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+/* Footer */
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark">
+    <div class="container">
+        <span class="navbar-brand fw-bold">🐾 PawsCare</span>
+    </div>
+</nav>
+
+<!-- Header -->
+<div class="hero">
+    <h1>Pet Care Services</h1>
+    <p>Love • Care • Protection for Your Pets</p>
+</div>
+
+<!-- Services -->
+<div class="container py-5">
+    <h2 class="text-center mb-5">Our Services</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow-sm p-4 text-center">
+                <i class="bi bi-heart icon"></i>
+                <h5 class="mt-3">Pet Grooming</h5>
+                <p>Professional grooming services for your pets.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm p-4 text-center">
+                <i class="bi bi-bandaid icon"></i>
+                <h5 class="mt-3">Veterinary Care</h5>
+                <p>Expert doctors for your pet’s health and safety.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm p-4 text-center">
+                <i class="bi bi-house-heart icon"></i>
+                <h5 class="mt-3">Pet Boarding</h5>
+                <p>Safe and comfortable stay for your pets.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contact Button -->
+    <div class="text-center mt-5">
+        <button class="btn btn-success btn-lg px-4" onclick="toggleContact()">Contact Us</button>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="mt-4 text-center shadow">
+        <h4>Contact Us</h4>
+        <p>📞 +91 9876543210</p>
+        <p>📧 pawscare@gmail.com</p>
+        <p>📍 Pune City</p>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 PawsCare Pet Services</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+function toggleContact() {
+    let c = document.getElementById("contact");
+    c.style.display = (c.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>

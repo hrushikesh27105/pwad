@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPPU TE-IT Syllabus</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fb;
+        }
+
+        .navbar {
+            background-color: #2c3e50;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .hero {
+            background-color: #34495e;
+            color: white;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            color: #2c3e50;
+        }
+
+        .card {
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .btn-custom {
+            background-color: #2980b9;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .btn-custom:hover {
+            background-color: #1f618d;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">SPPU TE-IT</a>
+
+        <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#menu">
+            ☰
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<section class="hero">
+    <div>
+        <h1>SPPU TE-IT Syllabus</h1>
+        <p>Simple & Clean Structure</p>
+    </div>
+</section>
+
+<!-- Subjects -->
+<div class="container" id="subjects">
+    <h2 class="section-title">Subjects</h2>
+
+    <div class="row g-4">
+
+        <!-- DSBDA -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Data Science">
+                <div class="card-body text-center">
+                    <h5>Data Science & Big Data</h5>
+                    <button class="btn btn-custom" onclick="showSyllabus('ds')">View Detailed Syllabus</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- WT -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" alt="Web Tech">
+                <div class="card-body text-center">
+                    <h5>Web Technology</h5>
+                    <button class="btn btn-custom" onclick="showSyllabus('wt')">View Detailed Syllabus</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI -->
+        <div class="col-md-4">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="AI">
+                <div class="card-body text-center">
+                    <h5>Artificial Intelligence</h5>
+                    <button class="btn btn-custom" onclick="showSyllabus('ai')">View Detailed Syllabus</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Contact -->
+<div class="container mt-5" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p class="text-center">Email: sppu@edu.in | Phone: +91 9876543210</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 SPPU TE-IT</p>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="syllabusModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detailed Syllabus</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="syllabusContent"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS -->
+<script>
+function showSyllabus(subject) {
+    let content = "";
+
+    if(subject === "ds") {
+        content = "<b>Data Science & Big Data</b><br>Unit 1: Data Preprocessing<br>Unit 2: Hadoop<br>Unit 3: Analytics<br>Unit 4: Visualization";
+    }
+    else if(subject === "wt") {
+        content = "<b>Web Technology</b><br>HTML, CSS, JavaScript, Bootstrap";
+    }
+    else if(subject === "ai") {
+        content = "<b>Artificial Intelligence</b><br>AI Basics, Search, ML, Neural Networks";
+    }
+
+    document.getElementById("syllabusContent").innerHTML = content;
+
+    let modal = new bootstrap.Modal(document.getElementById('syllabusModal'));
+    modal.show();
+}
+</script>
+
+</body>
+</html>
