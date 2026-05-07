@@ -1,140 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My City - Pune</title>
+<meta charset="UTF-8">
+<title>My City - Pune</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        /* Header */
-        .hero {
-            background: linear-gradient(135deg, #0d6efd, #6610f2);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6fb;
+}
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
+/* ================= PREMIUM HEADER ================= */
+.top-header {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: white;
+    text-align: center;
+    padding: 50px 15px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
 
-        /* Landmark title styles */
-        .fort { color: #dc3545; font-family: Georgia; }
-        .temple { color: #198754; font-family: 'Trebuchet MS'; }
-        .museum { color: #6f42c1; font-family: Arial; }
+.top-header h1 {
+    font-size: 45px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 2px;
+}
 
-        /* Card styling */
-        .card {
-            border: none;
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-        }
+.top-header p {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.9;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+/* ================= NAVBAR ================= */
+.custom-nav {
+    background: #0f172a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
-        .card img {
-            height: 200px;
-            object-fit: cover;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
+.custom-nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
-        .info {
-            display: none;
-            font-size: 14px;
-            margin-top: 10px;
-        }
+.custom-nav a:hover {
+    color: #ff4e50;
+}
 
-        footer {
-            background: #212529;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-    </style>
+/* ================= CITY TITLE ================= */
+.city-title {
+    text-align: center;
+    font-size: 55px;
+    font-weight: 800;
+    margin: 25px 0;
+    color: #0f172a;
+}
+
+/* ================= LANDMARK CARDS ================= */
+.landmark-card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    background: white;
+}
+
+.landmark-card:hover {
+    transform: translateY(-6px);
+}
+
+.landmark-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* LANDMARK COLORS */
+.l1 { color: #e63946; font-family: Georgia; }
+.l2 { color: #1d3557; font-family: "Courier New"; }
+.l3 { color: #2a9d8f; font-family: Verdana; }
+
+/* ================= SECTION TITLE ================= */
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-weight: 700;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">MyCity</a>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg custom-nav px-4">
+    <a class="navbar-brand text-white fw-bold" href="#">🏙 Pune Explorer</a>
+
+    <div class="ms-auto">
+        <a href="#landmarks">Landmarks</a>
+        <a href="#info">About</a>
     </div>
 </nav>
 
-<!-- Hero Section -->
-<div class="hero">
-    <h1>Pune City</h1>
-    <p>Discover Heritage & Culture</p>
+<!-- ================= HEADER ================= -->
+<div class="top-header">
+    <h1>MY CITY</h1>
+    <p>Discover Heritage • Culture • History</p>
 </div>
 
-<!-- Landmarks -->
-<div class="container py-5">
-    <h2 class="text-center mb-5">Famous Landmarks</h2>
+<!-- ================= CITY NAME ================= -->
+<div class="city-title">
+    PUNE CITY
+</div>
 
-    <div class="row g-4">
+<!-- ================= LANDMARKS ================= -->
+<div class="container" id="landmarks">
 
-        <!-- Shaniwar Wada -->
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Shaniwar_Wada%2C_Pune.jpg" alt="">
-                <div class="card-body text-center">
-                    <h5 class="fort">Shaniwar Wada</h5>
-                    <button class="btn btn-outline-primary btn-sm" onclick="toggleInfo('info1')">View Details</button>
-                    <p id="info1" class="info">Built in 1732, it was the seat of the Peshwas of the Maratha Empire.</p>
-                </div>
-            </div>
-        </div>
+<h2 class="section-title">Famous Landmarks</h2>
 
-        <!-- Dagdusheth -->
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Dagdusheth_Temple.jpg" alt="">
-                <div class="card-body text-center">
-                    <h5 class="temple">Dagdusheth Ganpati</h5>
-                    <button class="btn btn-outline-success btn-sm" onclick="toggleInfo('info2')">View Details</button>
-                    <p id="info2" class="info">A famous Ganesh temple attracting thousands of devotees every year.</p>
-                </div>
-            </div>
-        </div>
+<div class="row g-4">
 
-        <!-- Kelkar Museum -->
-        <div class="col-md-4">
-            <div class="card shadow-sm">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Kelkar_Museum.jpg" alt="">
-                <div class="card-body text-center">
-                    <h5 class="museum">Kelkar Museum</h5>
-                    <button class="btn btn-outline-danger btn-sm" onclick="toggleInfo('info3')">View Details</button>
-                    <p id="info3" class="info">A collection of over 20,000 artifacts showcasing Indian heritage.</p>
-                </div>
-            </div>
-        </div>
+<!-- SHANIWAR WADA -->
+<div class="col-md-4">
+<div class="landmark-card">
+    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/shaniwar-wada-pune-maharashtra-1-attr-hero?qlt=82&ts=1742184639448" class="landmark-img">
 
+    <div class="p-3 text-center">
+        <h4 class="l1">Shaniwar Wada</h4>
+        <button class="btn btn-danger"
+        onclick="showInfo('Shaniwar Wada: Historic fort built in 1732, symbol of Maratha Empire.')">
+            View Info
+        </button>
+    </div>
+</div>
+</div>
+
+<!-- AGA KHAN PALACE -->
+<div class="col-md-4">
+<div class="landmark-card">
+    <img src="https://www.mkgandhi.org/images/agakhan.jpg" class="landmark-img">
+
+    <div class="p-3 text-center">
+        <h4 class="l2">Aga Khan Palace</h4>
+        <button class="btn btn-primary"
+        onclick="showInfo('Aga Khan Palace: Historical monument associated with Mahatma Gandhi.')">
+            View Info
+        </button>
+    </div>
+</div>
+</div>
+
+<!-- SINHAGAD FORT -->
+<div class="col-md-4">
+<div class="landmark-card">
+    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/ae/b6/cc.jpg" class="landmark-img">
+
+    <div class="p-3 text-center">
+        <h4 class="l3">Sinhagad Fort</h4>
+        <button class="btn btn-success"
+        onclick="showInfo('Sinhagad Fort: Famous hill fort known for scenic views and battles.')">
+            View Info
+        </button>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="container mt-5" id="info">
+    <div class="card p-4 shadow-sm">
+        <h3>About Pune</h3>
+        <p>
+            Pune is known as the cultural capital of Maharashtra.
+            It is famous for education, IT industry, historical forts,
+            and pleasant climate throughout the year.
+        </p>
     </div>
 </div>
 
-<!-- Footer -->
-<footer>
-    <p>© 2026 My City Pune | WAD Assignment</p>
-</footer>
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    <h5>🏙 Pune Explorer</h5>
+    <p>Made with ❤️ for Educational Project</p>
+    <small>© 2026 All Rights Reserved</small>
+</div>
 
-<!-- JS -->
+<!-- ================= JS ================= -->
 <script>
-function toggleInfo(id) {
-    let el = document.getElementById(id);
-    el.style.display = (el.style.display === "block") ? "none" : "block";
+function showInfo(text) {
+    alert(text);
 }
 </script>
 

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>All About Tennis</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    font-weight: 600;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #0f172a;
+}
+
+.navbar a {
+    color: white !important;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+/* ================= PLAYER CARD ================= */
+.player-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    background: white;
+}
+
+.player-card:hover {
+    transform: translateY(-6px);
+}
+
+.player-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-weight: 600;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg px-4">
+    <a class="navbar-brand text-white fw-bold" href="#">🎾 Tennis World</a>
+
+    <div class="ms-auto">
+        <a href="#players">Players</a>
+        <a href="#rules">Rules</a>
+        <a href="#schedule">Grand Slams</a>
+    </div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<div class="header">
+    <h1>ALL ABOUT TENNIS 🎾</h1>
+    <p>Players • Rules • Grand Slams • Legends</p>
+</div>
+
+<!-- ================= PLAYERS ================= -->
+<div class="container" id="players">
+
+<h2 class="section-title">Famous Tennis Players</h2>
+
+<div class="row g-4">
+
+<!-- Roger Federer -->
+<div class="col-md-4">
+<div class="player-card">
+    <img src="https://cdn.britannica.com/57/183257-050-0BA11B4B/Roger-Federer-2012.jpg" class="player-img">
+
+    <div class="p-3 text-center">
+        <h5>Roger Federer</h5>
+        <button class="btn btn-success"
+        onclick="showAch('Roger Federer: 20 Grand Slams, 8 Wimbledon Titles, Tennis Elegance Icon')">
+            View Achievements
+        </button>
+    </div>
+</div>
+</div>
+
+<!-- Rafael Nadal -->
+<div class="col-md-4">
+<div class="player-card">
+    <img src="https://cdn.britannica.com/33/226733-050-1F65CDDD/Rafael-Nadal-championship-trophy-US-Open-USTA-Billie-Jean-King-National-Tennis-Center-September-8-2019.jpg" class="player-img">
+
+    <div class="p-3 text-center">
+        <h5>Rafael Nadal</h5>
+        <button class="btn btn-success"
+        onclick="showAch('Rafael Nadal: 22 Grand Slams, King of Clay, French Open Champion')">
+            View Achievements
+        </button>
+    </div>
+</div>
+</div>
+
+<!-- Novak Djokovic -->
+<div class="col-md-4">
+<div class="player-card">
+    <img src="https://cdn.britannica.com/79/249579-050-B262887F/Novak-Djokovic-Serbia-US-Open-2023.jpg" class="player-img">
+
+    <div class="p-3 text-center">
+        <h5>Novak Djokovic</h5>
+        <button class="btn btn-success"
+        onclick="showAch('Novak Djokovic: 24 Grand Slams, World No.1 Record Holder')">
+            View Achievements
+        </button>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- ================= RULES ================= -->
+<div class="container" id="rules">
+
+<h2 class="section-title">Tennis Rules</h2>
+
+<div class="card p-4 shadow-sm">
+<ul>
+<li>Game starts with a serve diagonally across court.</li>
+<li>Ball must land inside opponent’s boundary.</li>
+<li>Points system: 15, 30, 40, Game.</li>
+<li>Matches are best of 3 or 5 sets.</li>
+<li>Faults include double fault and out-of-bounds shots.</li>
+</ul>
+</div>
+
+</div>
+
+<!-- ================= GRAND SLAM ================= -->
+<div class="container" id="schedule">
+
+<h2 class="section-title">Grand Slam Schedule</h2>
+
+<div class="table-responsive">
+<table class="table table-striped table-bordered">
+<tr class="table-dark">
+<th>Tournament</th>
+<th>Location</th>
+<th>Month</th>
+</tr>
+
+<tr>
+<td>Australian Open</td>
+<td>Australia</td>
+<td>January</td>
+</tr>
+
+<tr>
+<td>French Open</td>
+<td>France</td>
+<td>May - June</td>
+</tr>
+
+<tr>
+<td>Wimbledon</td>
+<td>United Kingdom</td>
+<td>June - July</td>
+</tr>
+
+<tr>
+<td>US Open</td>
+<td>USA</td>
+<td>August - September</td>
+</tr>
+
+</table>
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div class="footer">
+    © 2026 Tennis World | Designed for Educational Purpose
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+function showAch(text) {
+    alert(text);
+}
+</script>
+
+</body>
+</html>

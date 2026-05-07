@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback Form</title>
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet"
+        href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #dbeafe, #f0f9ff);
+        }
+
+        .feedback-container {
+            max-width: 520px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-title {
+            text-align: center;
+            color: #2563eb;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .ui-input-text,
+        textarea,
+        .ui-select {
+            border-radius: 10px !important;
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background: #2563eb !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 12px !important;
+            font-size: 18px !important;
+            font-weight: bold !important;
+            margin-top: 20px !important;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8 !important;
+        }
+
+        .toggle-label {
+            margin-top: 20px;
+            margin-bottom: 8px;
+            display: block;
+            color: #444;
+        }
+
+        #successMsg {
+            display: none;
+            color: green;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 18px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Feedback Page -->
+    <div data-role="page" id="feedbackPage">
+
+        <!-- Header -->
+        <div data-role="header" data-theme="b">
+            <h1>Feedback Form</h1>
+        </div>
+
+        <!-- Main Content -->
+        <div role="main" class="ui-content">
+
+            <div class="feedback-container">
+
+                <div class="form-title">
+                    Student Feedback
+                </div>
+
+                <!-- Name -->
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input type="text"
+                    id="name"
+                    placeholder="Enter your full name">
+
+                <!-- Email -->
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input type="email"
+                    id="email"
+                    placeholder="Enter your email address">
+
+                <!-- Department -->
+                <label for="department">
+                    Select Department
+                </label>
+
+                <select id="department">
+
+                    <option>Information Technology</option>
+                    <option>Computer Engineering</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Electrical Engineering</option>
+                    <option>Electronics & Telecommunication</option>
+
+                </select>
+
+                <!-- Flip Toggle Switch -->
+                <label for="satisfaction"
+                    class="toggle-label">
+
+                    Are you satisfied with the course?
+
+                </label>
+
+                <select name="satisfaction"
+                    id="satisfaction"
+                    data-role="flipswitch">
+
+                    <option value="off">No</option>
+                    <option value="on">Yes</option>
+
+                </select>
+
+                <!-- Feedback Message -->
+                <label for="message">
+                    Feedback Message
+                </label>
+
+                <textarea id="message"
+                    placeholder="Write your feedback here...">
+                </textarea>
+
+                <!-- Submit Button -->
+                <button onclick="showMessage()"
+                    class="ui-btn submit-btn">
+
+                    Submit Feedback
+
+                </button>
+
+                <!-- Success Message -->
+                <p id="successMsg">
+                    Feedback Submitted Successfully!
+                </p>
+
+                <!-- Footer -->
+                <div class="footer-text">
+                    Thank you for your valuable feedback.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+
+        function showMessage() {
+
+            document.getElementById("successMsg").style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
