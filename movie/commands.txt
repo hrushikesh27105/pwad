@@ -1,0 +1,300 @@
+Create a Node.js Movie Ticket Booking Application From Scratch
+
+We will create a movie ticket booking application using:
+
+Node.js
+Express.js
+HTML
+Bootstrap
+STEP 1 : Create Project Folder
+
+Create a folder:
+
+movie-booking-app
+
+Open it in:
+
+VS Code
+STEP 2 : Open Terminal
+
+In VS Code:
+
+Terminal → New Terminal
+STEP 3 : Initialize Node.js Project
+
+Run:
+
+npm init -y
+
+This creates:
+
+package.json
+STEP 4 : Install Express
+
+Run:
+
+npm install express
+
+This creates:
+
+node_modules
+package-lock.json
+STEP 5 : Create Files and Folder
+
+Create:
+
+server.js
+
+Create folder:
+
+public
+
+Inside public, create:
+
+index.html
+Final Folder Structure
+movie-booking-app
+│
+├── node_modules
+│
+├── public
+│      └── index.html
+│
+├── package.json
+│
+├── package-lock.json
+│
+└── server.js
+STEP 6 : Write server.js Code
+File: server.js
+const express = require("express");
+
+const path = require("path");
+
+const app = express();
+
+const PORT = 3000;
+
+// serve static files
+app.use(express.static(path.join(__dirname, "public")));
+
+// start server
+app.listen(PORT, () => {
+
+    console.log(`Server running at http://localhost:${PORT}`);
+
+});
+STEP 7 : Write index.html Code
+File: public/index.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+<title>Movie Ticket Booking</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+<style>
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    font-family:'Segoe UI';
+    color:white;
+}
+
+.header{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.card{
+    border:none;
+    border-radius:20px;
+    padding:25px;
+    margin-top:40px;
+    background:white;
+    color:black;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.3);
+}
+
+.btn-book{
+    background:linear-gradient(45deg,#2563eb,#7c3aed);
+    border:none;
+    color:white;
+    padding:12px;
+    width:100%;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.ticket{
+    margin-top:20px;
+    background:#dcfce7;
+    padding:15px;
+    border-radius:10px;
+    display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+🎬 Movie Ticket Booking System
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h3 class="text-center text-primary mb-4">
+
+Book Your Movie Ticket
+
+</h3>
+
+<form id="bookingForm">
+
+<label>Customer Name</label>
+
+<input type="text"
+       class="form-control mb-3"
+       id="name"
+       required>
+
+<label>Select Movie</label>
+
+<select class="form-control mb-3"
+        id="movie">
+
+<option>Avengers Endgame</option>
+<option>Pushpa 2</option>
+<option>Interstellar</option>
+<option>KGF Chapter 2</option>
+
+</select>
+
+<label>Number of Tickets</label>
+
+<input type="number"
+       class="form-control mb-3"
+       id="tickets"
+       min="1"
+       required>
+
+<label>Show Timing</label>
+
+<select class="form-control mb-4"
+        id="timing">
+
+<option>10:00 AM</option>
+<option>1:00 PM</option>
+<option>4:00 PM</option>
+<option>8:00 PM</option>
+
+</select>
+
+<button class="btn-book">
+
+Book Ticket
+
+</button>
+
+</form>
+
+<div class="ticket"
+     id="ticket">
+
+<h4 class="text-success">
+
+✅ Ticket Booked Successfully!
+
+</h4>
+
+<p id="details"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("bookingForm")
+
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name =
+        document.getElementById("name").value;
+
+    let movie =
+        document.getElementById("movie").value;
+
+    let tickets =
+        document.getElementById("tickets").value;
+
+    let timing =
+        document.getElementById("timing").value;
+
+    let total = tickets * 200;
+
+    document.getElementById("details").innerHTML =
+
+        "<b>Name:</b> " + name + "<br>" +
+
+        "<b>Movie:</b> " + movie + "<br>" +
+
+        "<b>Tickets:</b> " + tickets + "<br>" +
+
+        "<b>Show Time:</b> " + timing + "<br>" +
+
+        "<b>Total Amount:</b> ₹" + total;
+
+    document.getElementById("ticket").style.display = "block";
+
+    document.getElementById("bookingForm").reset();
+
+});
+
+</script>
+
+</body>
+</html>
+STEP 8 : Run Application
+
+In terminal run:
+
+node server.js
+STEP 9 : Open Browser
+
+Open:
+
+http://localhost:3000
+
+Your Movie Ticket Booking Application will open successfully. 🎉
+
+Output Features
+
+✅ Static website using Node.js
+✅ Movie selection
+✅ Ticket booking form
+✅ Ticket price calculation
+✅ Attractive UI
+✅ Express server
